@@ -1,0 +1,34 @@
+{
+	"languageserver": {
+		"ccls": {
+			"command": "ccls",
+			"filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
+			"rootPatterns": [
+				".ccls",
+				"build/debug/compile_commands.json",
+				"build/release/compile_commands.json",
+				"compile_commands.json",
+				".git/",
+				".hg/",
+				".nvim/"
+			],
+			"initializationOptions": {
+				"index": { "onChange": true },
+				"highlight": { "lsRanges": true },
+				"cache": {
+					"directory": "/tmp/ccls"
+				}
+			}
+		},
+		"lua": {
+			"command": "java",
+			"args": ["-cp", "/home/grzegorz/.local/software/EmmyLua-LanguageServer/EmmyLua-LS-all.jar", "com.tang.vscode.MainKt"],
+			"filetypes": ["lua"],
+			"rootPatterns": [".git/"]
+		},
+		"csharp-ls": {
+			"command": "csharp-ls",
+			"filetypes": ["cs"]
+		}
+	}
+}
