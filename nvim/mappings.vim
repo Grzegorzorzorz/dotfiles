@@ -2,7 +2,7 @@ let mapleader = ";"
 
 nnoremap <leader>rr :source $MYVIMRC<CR>
 
-nnoremap <leader>n :set invnumber<CR>
+nnoremap <leader>n :set nu! rnu!<CR>
 nnoremap <leader>h :nohl<CR>
 
 nnoremap <leader>bs :BufferOrderByLanguage<CR>

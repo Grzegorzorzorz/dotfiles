@@ -1,4 +1,4 @@
-set number
+set nu rnu
 set cc=80
 
 " Determine tab behaviour
