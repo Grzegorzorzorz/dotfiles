@@ -13,8 +13,8 @@ nnoremap <leader>gd :Gitsigns diffthis<CR>
 
 nnoremap <F8> :TagbarToggle<CR>
 
-nnoremap <silent> <C-f> :CHADopen --always-focus<CR>
-nnoremap <silent> <C-b> :CHADopen<CR>
+nnoremap <silent> <leader>f :CHADopen --always-focus<CR>
+nnoremap <silent> <leader>b :CHADopen<CR>
 
 inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
 
