@@ -20,5 +20,6 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'romgrk/barbar.nvim'
 Plug 'jdhao/whitespace.nvim'
 Plug 'lewis6991/gitsigns.nvim'
+Plug 'karb94/neoscroll.nvim'
 
 call plug#end()
