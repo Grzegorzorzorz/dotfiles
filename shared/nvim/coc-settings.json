@@ -15,20 +15,15 @@
 			"initializationOptions": {
 				"index": { "onChange": true },
 				"highlight": { "lsRanges": true },
+				"compilationDatabaseDirectory": ".nvim",
 				"cache": {
 					"directory": "/tmp/ccls"
 				}
 			}
-		},
-		"lua": {
-			"command": "java",
-			"args": ["-cp", "/home/grzegorz/.local/software/EmmyLua-LanguageServer/EmmyLua-LS-all.jar", "com.tang.vscode.MainKt"],
-			"filetypes": ["lua"],
-			"rootPatterns": [".git/"]
-		},
-		"csharp-ls": {
-			"command": "csharp-ls",
-			"filetypes": ["cs"]
 		}
-	}
+  },
+  "coc.source.vimtex.filetypes": [
+    "tex",
+    "latex"
+  ]
 }

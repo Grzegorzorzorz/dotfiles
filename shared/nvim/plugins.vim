@@ -21,5 +21,6 @@ Plug 'romgrk/barbar.nvim'
 Plug 'jdhao/whitespace.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'karb94/neoscroll.nvim'
+Plug 'lervag/vimtex'
 
 call plug#end()

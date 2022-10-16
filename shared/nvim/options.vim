@@ -1,5 +1,5 @@
 set nu rnu
-set cc=80
+set cc=81
 
 " Determine tab behaviour
 set autoindent
