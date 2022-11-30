@@ -1,4 +1,5 @@
 set nu rnu
+set cursorline
 set cc=81
 
 " Determine tab behaviour
@@ -18,3 +19,5 @@ set noswapfile
 
 " Set make split direction for sp vsp
 set splitbelow splitright
+
+set laststatus=3
