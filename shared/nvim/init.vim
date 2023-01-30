@@ -12,4 +12,4 @@ for s:fname in s:core_conf_files
 	execute printf('source %s/%s', stdpath('config'), s:fname)
 endfor
 
-lua require('init-lua')
+lua require('init')
