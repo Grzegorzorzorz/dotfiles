@@ -5,27 +5,32 @@ nnoremap <leader>rr :source $MYVIMRC<CR>
 nnoremap <leader>n :set nu! rnu!<CR>
 nnoremap <leader>h :nohl<CR>
 
-nnoremap <leader>bs :BufferOrderByLanguage<CR>
-
 " git bindings
 nnoremap <leader>gl :Gitsigns toggle_current_line_blame<CR>
 nnoremap <leader>gd :Gitsigns diffthis<CR>
 
-nnoremap <F8> :TagbarToggle<CR>
+nnoremap <silent> <leader>v :Explore<CR>
 
-nnoremap <silent> <leader>f :CHADopen --always-focus<CR>
-nnoremap <silent> <leader>v :CHADopen<CR>
+" Find
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
 
-nnoremap <silent> <A-,> :BufferPrevious<CR>
-nnoremap <silent> <A-.> :BufferNext<CR>
-nnoremap <silent> <A-<> :BufferMovePrevious<CR>
-nnoremap <silent> <A->> :BufferMoveNext<CR>
-nnoremap <silent> <A-c> :BufferClose<CR>
+" Buffer
+nnoremap <silent> <leader>bc :bd<CR>
+nnoremap <silent> <leader>bw :w<CR>
+nnoremap <silent> <leader>bs :w<CR>:bd<CR>
+nnoremap <silent> <leader>bf <cmd>Telescope buffers<CR>
 
 " Remove arrow key crutch
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
+nnoremap <Up> <Nop>
+nnoremap <Down> <Nop>
+nnoremap <Left> <Nop>
+nnoremap <Right> <Nop>
+inoremap <Up> <Nop>
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>

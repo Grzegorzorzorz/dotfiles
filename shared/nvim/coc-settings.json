@@ -1,4 +1,5 @@
 {
+	"colors.enable": false,
 	"languageserver": {
 		"ccls": {
 			"command": "ccls",
@@ -21,9 +22,9 @@
 				}
 			}
 		}
-  },
-  "coc.source.vimtex.filetypes": [
-    "tex",
-    "latex"
-  ]
+	},
+	"coc.source.vimtex.filetypes": [
+		"tex",
+		"latex"
+	]
 }

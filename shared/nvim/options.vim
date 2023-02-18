@@ -1,5 +1,5 @@
 set nu rnu
-set cursorline
+"set cursorline
 set cc=81
 
 " Determine tab behaviour
