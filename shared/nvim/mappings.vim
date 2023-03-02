@@ -20,10 +20,13 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
 
 " Buffer
-nnoremap <silent> <leader>bc :bd<CR>
-nnoremap <silent> <leader>bw :w<CR>
-nnoremap <silent> <leader>bs :w<CR>:bd<CR>
-nnoremap <silent> <leader>bf <cmd>Telescope buffers<CR>
+nnoremap <leader>bn :enew<CR>
+nnoremap <leader>bv :vnew<CR>
+nnoremap <leader>bh :new<CR>
+nnoremap <leader>bc :bd<CR>
+nnoremap <leader>bw :w<CR>
+nnoremap <leader>bs :w<CR>:bd<CR>
+nnoremap <leader>bf <cmd>Telescope buffers<CR>
 
 " Remove arrow key crutch
 nnoremap <Up> <Nop>
