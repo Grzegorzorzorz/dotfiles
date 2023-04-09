@@ -188,6 +188,7 @@ exec --no-startup-id gentoo-pipewire-launcher
 exec --no-startup-id ssh-agent
 exec --no-startup-id /usr/libexec/polkit-gnome-authentication-agent-1
 exec --no-startup-id light-locker
+exec_always --no-startup-id nvidia-settings -l
 exec_always --no-startup-id $scripts/launch picom
 exec_always --no-startup-id $scripts/launch discover-overlay
 exec_always --no-startup-id $scripts/launch polybar intelbar
@@ -206,9 +207,10 @@ bindsym $mod+t exec dolphin
 bindsym $mod+Shift+e exec ~/.config/rofi/powermenu/type-4/powermenu.sh
 bindsym XF86PowerOff exec ~/.config/rofi/powermenu/type-4/powermenu.sh
 bindsym Control+Mod1+Delete exec loginctl poweroff
-bindsym $mod+Control+l exec loginctl lock-session
+bindsym $mod+Control+l exec $scripts/lock
 
 bindsym Print exec $scripts/screenshot
+bindsym Shift+Print exec $scripts/screenshot-area
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 bindsym XF86KbdBrightnessUp exec $scripts/kb-backlight + 1
