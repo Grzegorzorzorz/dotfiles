@@ -4,5 +4,5 @@ FORMAT="%Y-%m-%d_%H-%M-%S.%3N"
 SCREENSHOT_DIR="/home/grzegorz/Pictures/screenshots"
 
 SCREENSHOT_PATH=${SCREENSHOT_DIR}/$(date +${FORMAT}).png
-import -silent -window root "$SCREENSHOT_PATH"
+grim -t png "$SCREENSHOT_PATH"
 xclip -selection clipboard -t image/png "$SCREENSHOT_PATH"

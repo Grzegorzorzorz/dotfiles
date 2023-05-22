@@ -1,0 +1,6 @@
+#!/bin/bash
+
+hyprctl reload
+hyprctl plugin unload $HOME/.config/hypr/plugins/*
+sleep 1
+hyprctl plugin load $HOME/.config/hypr/plugins/*
