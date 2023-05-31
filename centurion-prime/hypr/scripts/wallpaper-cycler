@@ -1,0 +1,26 @@
+#!/bin/bash
+
+WALLPAPER_TIME=15m
+WALLPAPER_DIRECTORY=~/Pictures/wallpapers/active
+
+export SWWW_TRANSITION=grow
+export SWWW_TRANSITION_POS=0.75,0.90
+export SWWW_TRANSITION_ANGLE=30
+export SWWW_TRANSITION_DURATION=3
+export SWWW_TRANSITION_FPS=240
+
+#####
+
+
+while :
+do
+	# Shuffle the array (we don't want the same wallpapers every time).
+	echo "Shuffling wallpapers!"
+	WALLPAPERS=($WALLPAPER_DIRECTORY/*)
+	IFS=$'\n' WALLPAPERS=($(printf "%s$IFS" "${WALLPAPERS[@]}" | shuf))
+	for WALLPAPER in ${WALLPAPERS[@]}; do
+		sleep $WALLPAPER_TIME
+		echo "Showing $WALLPAPER"
+		swww img $WALLPAPER
+	done
+done
