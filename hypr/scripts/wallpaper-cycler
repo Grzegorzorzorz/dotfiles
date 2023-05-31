@@ -19,8 +19,8 @@ do
 	WALLPAPERS=($WALLPAPER_DIRECTORY/*)
 	IFS=$'\n' WALLPAPERS=($(printf "%s$IFS" "${WALLPAPERS[@]}" | shuf))
 	for WALLPAPER in ${WALLPAPERS[@]}; do
-		sleep $WALLPAPER_TIME
 		echo "Showing $WALLPAPER"
 		swww img $WALLPAPER
+		sleep $WALLPAPER_TIME
 	done
 done
