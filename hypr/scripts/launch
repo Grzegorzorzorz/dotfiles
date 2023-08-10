@@ -2,7 +2,7 @@
 
 LOG_DIR="/tmp/$(id -un)/log"
 NAME=$(basename $1.log)
-
+PATH="$HOME/.local/bin:/home/grzegorz/.local/share/go/bin:$PATH"
 killall -q "$1"
 
 mkdir -p /tmp/$(id -un)/log

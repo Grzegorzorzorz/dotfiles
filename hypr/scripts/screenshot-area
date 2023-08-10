@@ -3,17 +3,8 @@
 FORMAT="%Y-%m-%d_%H-%M-%S.%3N"
 SCREENSHOT_DIR="/home/grzegorz/Pictures/screenshots"
 
-# This is a bit of a hack, but you can have overlapping screenshots otherwise.
-killall grim
-killall slurp
-killall hyprpicker
-
 SCREENSHOT_PATH=${SCREENSHOT_DIR}/$(date +${FORMAT}).png
-$(grim -g "$(slurp)" $SCREENSHOT_PATH) &
-GRIM_PID=$!
-hyprpicker -nrz &
-FREEZE_PID=$!
-tail --pid=$GRIM_PID -f /dev/null
-kill $FREEZE_PID
+
+$HOME/.local/bin/grimblast --freeze save area $SCREENSHOT_PATH
 
 wl-copy < $SCREENSHOT_PATH
