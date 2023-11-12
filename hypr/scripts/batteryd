@@ -1,0 +1,20 @@
+##!/bin/bash
+#
+#mkdir -p /tmp/grzegorz
+#touch /tmp/grzegorz/batteryd
+#
+#ADP0_STATUS=-1
+#
+#while true; do
+#	if [[ $ADP0_STATUS != $(< /tmp/grzegorz/batteryd) ]]; then
+#		if [[ $ADP0_STATUS = 0 ]]; then
+#			wlr-randr --output eDP-1 --mod 2560x1440@60
+#		else
+#			wlr-randr --output eDP-1 --mod 2560x1440@240.003006
+#		fi
+#
+#		echo $(< /sys/class/power_supply/ADP0/online) > /tmp/grzegorz/batteryd
+#	fi
+#	ADP0_STATUS=$(< /sys/class/power_supply/ADP0/online)
+#	inotifywait -e close /sys/class/power_supply/ADP0/online
+#done

@@ -3,7 +3,9 @@
 LOG_DIR="/tmp/$(id -un)/log"
 NAME=$(basename $1.log)
 PATH="$HOME/.local/bin:/home/grzegorz/.local/share/go/bin:$PATH"
-killall -q "$1"
+
+pkill $(basename "$1")
+killall "$1"
 
 mkdir -p /tmp/$(id -un)/log
 # Rotate logs if they exist
