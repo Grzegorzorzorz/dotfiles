@@ -1,0 +1,79 @@
+;(defwidget workspaces []
+; (eventbox
+;   :height 40
+;   :width 544
+;  (box :class "workspaces"
+;   :spacing 8
+;   :space-evenly false
+;   :valign "center"
+;   :halign "center"
+;   (for i in workspace
+;	(box
+;	 :width 40
+;	 :height 40
+;	 (button
+;	  :onclick "hyprctl dispatch workspace ${i.id}"
+;	  :class {i.active == "true" ? "ws-active" : "ws-inactive"}
+;	  (box
+;	   :halign "center"
+;	   :halign "valign"
+;	   (label
+;	    :halign "center"
+;	    :class "ws-text"
+;	    :text "${i.id}"
+;	    :valign "center"
+;	   )
+;	  )
+;	 )
+;    )
+;   )
+;  )
+; )
+;)
+
+(defwidget workspaces []
+  (box
+	:width 544
+    (overlay
+      (box
+        :class "module workspaces"
+        :space-evenly false
+		:spacing 8
+        :valign "center"
+        :halign "center"
+        (for i in workspace
+          (eventbox
+		    :onclick "hyprctl dispatch workspace ${i.num}"
+			:width 40
+			:height 40
+            :class "${i.class}"
+            (label
+              :valign "center"
+              :text "${i.num}"
+            )
+          )
+        )
+      )
+      (button
+	    :width 40
+	    :height 40
+        :style "
+        margin-left:  ${48 * (activews - 1) + 30}px;
+        margin-right: ${48 * (10 - activews) + 30}px;
+        "
+		:class "ws-active-wrapper"
+        (box
+		  :halign "center"
+          :valign "center"
+		  :height 40
+		  :width 40
+		  :class "ws-active"
+	      (label
+          :text "${activews}"
+	      )
+        )
+        ; "●"
+      )
+    )
+  )
+)

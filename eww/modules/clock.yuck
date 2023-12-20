@@ -1,0 +1,22 @@
+(defwidget clock []
+ (box
+  :class "clock"
+  :space-evenly false
+  :orientation "v"
+  :valign "start"
+  :halign "end"
+  (box
+   :space-evenly false
+   :halign "center"
+   :class "clock-time"
+   (label :text "${time.hour}:${time.minute}")
+  )
+  (box
+   :space-evenly false
+   :style "background"
+   :halign "end"
+   :valign "start"
+   (label :text "${time.day} ${time.date}" :class "clock-date")
+  )
+ )
+)

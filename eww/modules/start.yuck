@@ -1,0 +1,16 @@
+(defwidget start []
+ (box
+  :halign "center"
+  :valign "center"
+  :height 40
+  :width 40
+  (eventbox
+   :onclick "~/.config/hypr/scripts/launcher"
+   (box
+    :style 'background: url("img/gentoo-logo.svg");
+      	   background-size: 100%;
+     	   background-repeat: no-repeat;'
+   )
+  )
+ )
+)

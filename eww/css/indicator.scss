@@ -1,0 +1,18 @@
+.indicator {
+	color: $bar-fg;
+	background: $bar-bg;
+	border-radius: 16px;
+}
+
+.volume-progress {
+	color: $pink;
+	background: $bar-bbg;
+}
+
+.volume-icon {
+	color: $bar-fg;
+	font-size: 13pt;
+	padding-right: 4px;
+	padding-top: 2px;
+	font-family: "FiraCode Nerd Font";
+}

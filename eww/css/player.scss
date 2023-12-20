@@ -1,0 +1,40 @@
+.player-button-box {
+	background: rgba(#000000, 0.4);
+	border-radius: 20%;
+}
+
+.player-button-box-inactive {
+	background: $bar-bbg;
+	border-radius: 20%;
+}
+
+.player-art {
+	border-radius: 20%;
+}
+
+.player-button-circle {
+	color: $bar-ffg;
+	background: rgba(#2e2e2e, 0.7);
+	font-size: 12pt;
+	border-radius: 100%;
+}
+
+.player-button {
+	background: transparent;
+	border: 0px;
+	box-shadow: none;
+	text-shadow: none;
+}
+
+.player-song {
+	color: $bar-ffg;
+	font-size: 12pt;
+}
+
+.player-artist {
+	font-size: 9pt;
+}
+
+.player-progress {
+	color: $bar-ffg;
+}

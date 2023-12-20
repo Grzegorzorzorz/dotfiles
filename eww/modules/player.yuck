@@ -1,0 +1,60 @@
+(defwidget player []
+ (box
+  :orientation "h"
+  :space-evenly false
+  :spacing 8
+  :valign "center"
+  :height 48
+  (overlay
+   :space-evenly false
+   (box
+    :class "player-art"
+    :valign "center"
+    :width 48
+    :height 48
+    :style 'background: url("${player-art}");
+            background-size: cover;'
+   ) 
+   (box
+    :width 48
+	:height 48
+	:class {player-status != "" ? "player-button-box" : "player-button-box-inactive"}
+	(overlay
+	 :valign "center"
+	 :halign "center"
+	 (button
+	  :class {player-status != "" ? "player-button" : "hidden"}
+	  :onclick {player-status != "Playing" ? "playerctl play" : "playerctl pause"}
+	 )
+	 (box
+	  :class {player-status != "" ? "player-button-circle" : "hidden"}
+	  :width 4
+	  :height 4
+	  (label :text {player-status == "Playing" ? "" : ""})
+	 )
+	 (circular-progress
+      :class {player-status != "" ? "player-progress" : "hidden"}
+	  :start-at 75
+	  :value {player-percentage}
+	  :thickness 3
+	 )
+	)
+   )
+  )
+  (box
+   :orientation "v"
+   (label
+    :text {player-status != "" ? "${player-song}": "No players detected"}
+	:class "player-song" :halign "start"
+    :limit-width 30
+	:show_truncated true
+   )
+   (label
+    :text {player-status != "" ? "${player-artist}" : "Open a player to start!"}
+	:class "player-artist" :halign "start"
+    :limit-width 30
+	:show_truncated true
+   )
+  )
+ )
+)
