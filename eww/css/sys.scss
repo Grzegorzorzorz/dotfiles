@@ -24,7 +24,8 @@
 
 .sys-icon {
 	color: $bar-fg;
-	font-size: 15pt;
+	font-family: "Symbols Nerd Font";
+	font-size: 11pt;
 }
 
 .temperature-progress {
@@ -56,7 +57,8 @@
 }
 
 .battery-icon {
-	font-size: 9pt;
+	font-size: 11pt;
+	font-family: "Symbols Nerd Font";
 	color: $bar-bbg;
 }
 

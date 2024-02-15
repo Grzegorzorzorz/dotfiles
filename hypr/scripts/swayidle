@@ -1,9 +1,9 @@
 #!/bin/bash
 
 swayidle -w \
-	lock '$HOME/.config/hypr/scripts/lock -f --grace 0' \
+	lock '$HOME/.config/hypr/scripts/lock -f' \
 	timeout 840 'xbacklight -dec 20' \
-		 resume 'xbacklight -inc 20' \
+		resume 'xbacklight -inc 20' \
 	timeout 870 '$HOME/.config/hypr/scripts/lock -f --grace 30' \
 	timeout 3600 'loginctl suspend' \
-	before-sleep '$HOME/.config/hypr/scripts/lock -f --grace 0'
+	before-sleep '$HOME/.config/hypr/scripts/lock -f'

@@ -26,8 +26,7 @@
     :thickness 4
 	(label
 	 :text ""
-	 :class "sys-label"
-	 :style "font-size: 11pt"
+	 :class "sys-icon"
 	)
    )
   )
