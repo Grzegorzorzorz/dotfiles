@@ -1,7 +1,0 @@
-playerctl pause
-dunstctl set-paused true
-echo $(dunstctl is-paused)
-light-locker-command -l
-#betterlockscreen -l
-dunstctl set-paused false
-echo $(dunstctl is-paused)
