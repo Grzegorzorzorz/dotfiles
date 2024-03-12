@@ -94,6 +94,7 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR='nvim'
 alias ls="ls --hyperlink=auto --color=tty"
+alias cd="z"
 
 eval "$(zoxide init zsh)"
 
