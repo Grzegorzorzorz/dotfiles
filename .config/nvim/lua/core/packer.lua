@@ -1,81 +1,87 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
 -- Only required if you have packer configured as `opt`
-vim.cmd [[packadd packer.nvim]]
+vim.cmd([[packadd packer.nvim]])
 
-return require('packer').startup(function(use)
+return require("packer").startup(function(use)
 	-- Packer can manage itself
-	use 'wbthomason/packer.nvim'
-
-	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.5',
-		requires = { {'nvim-lua/plenary.nvim'} }
-	}
+	use("wbthomason/packer.nvim")
 
 	use({
-		'jacoborus/tender.vim',
-		as = 'tender.nvim',
+		"nvim-telescope/telescope.nvim",
+		tag = "0.1.5",
+		requires = { { "nvim-lua/plenary.nvim" } },
+	})
+
+	use({
+		"jacoborus/tender.vim",
+		as = "tender.nvim",
 		config = function()
-			vim.cmd('colorscheme tender')
-		end
+			vim.cmd("colorscheme tender")
+		end,
 	})
 
-	use 'rmehri01/onenord.nvim'
+	use("rmehri01/onenord.nvim")
 
 	use({
-		'nvim-treesitter/nvim-treesitter',
-		run = ':TSUpdate'
+		"nvim-treesitter/nvim-treesitter",
+		run = ":TSUpdate",
 	})
 
-	use {
-		'VonHeikemen/lsp-zero.nvim',
-		branch = 'v2.x',
+	use({
+		"VonHeikemen/lsp-zero.nvim",
+		branch = "v2.x",
 		requires = {
 			-- LSP Support
-			{'neovim/nvim-lspconfig'},             -- Required
-			{                                      -- Optional
-			'williamboman/mason.nvim',
-			run = function()
-				pcall(vim.cmd, 'MasonUpdate')
-			end,
+			{ "neovim/nvim-lspconfig" }, -- Required
+			{ -- Optional
+				"williamboman/mason.nvim",
+				run = function()
+					pcall(vim.cmd, "MasonUpdate")
+				end,
+			},
+			{ "williamboman/mason-lspconfig.nvim" }, -- Optional
+
+			-- Autocompletion
+			{ "hrsh7th/nvim-cmp" }, -- Required
+			{ "hrsh7th/cmp-nvim-lsp" }, -- Required
+			{ "L3MON4D3/LuaSnip" }, -- Required
 		},
-		{'williamboman/mason-lspconfig.nvim'}, -- Optional
+	})
 
-		-- Autocompletion
-		{'hrsh7th/nvim-cmp'},     -- Required
-		{'hrsh7th/cmp-nvim-lsp'}, -- Required
-		{'L3MON4D3/LuaSnip'},     -- Required
+	use({
+		"jiaoshijie/undotree",
+		config = function()
+			require("undotree").setup()
+		end,
+		requires = {
+			"nvim-lua/plenary.nvim",
+		},
+	})
 
-	}
-}
+	use({ "norcalli/nvim-colorizer.lua" })
 
-use {
-	"jiaoshijie/undotree",
-	config = function()
-		require('undotree').setup()
-	end,
-	requires = {
-		"nvim-lua/plenary.nvim",
-	},
-}
+	use({ "mfussenegger/nvim-dap" })
+	use({ "jay-babu/mason-nvim-dap.nvim" })
+	use({ "theHamsta/nvim-dap-virtual-text" })
+	use({ "nvim-telescope/telescope-dap.nvim", requires = { "mfussenegger/nvim-dap" } })
 
-use { 'norcalli/nvim-colorizer.lua' }
+	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
+	use("lukas-reineke/indent-blankline.nvim")
 
-use { 'mfussenegger/nvim-dap' }
-use { 'jay-babu/mason-nvim-dap.nvim' }
-use { 'theHamsta/nvim-dap-virtual-text' }
-use { 'nvim-telescope/telescope-dap.nvim',requires = {"mfussenegger/nvim-dap"} }
+	use({ "stevearc/overseer.nvim" })
 
-use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
-use "lukas-reineke/indent-blankline.nvim"
-
-use { 'stevearc/overseer.nvim' }
-
-use {
-	"rshkarin/mason-nvim-lint", requires = {
-		"williamboman/mason.nvim",
-		"mfussenegger/nvim-lint",
-	}
-}
-
+	use({
+		"rshkarin/mason-nvim-lint",
+		requires = {
+			"williamboman/mason.nvim",
+			"mfussenegger/nvim-lint",
+		},
+	})
+	use({
+		"stevearc/conform.nvim",
+		config = function()
+			require("conform").setup()
+		end,
+	})
 end)

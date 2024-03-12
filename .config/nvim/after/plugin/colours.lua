@@ -12,7 +12,7 @@ end
 
 ColourMyPencils()
 
-require("ibl").setup {
+require("ibl").setup({
 	indent = {
 		char = "▏",
 		repeat_linebreak = false,
@@ -23,6 +23,6 @@ require("ibl").setup {
 		show_end = false,
 	},
 	whitespace = {
-        remove_blankline_trail = true,
-    },
-}
+		remove_blankline_trail = true,
+	},
+})
