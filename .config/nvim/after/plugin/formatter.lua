@@ -4,6 +4,7 @@ require("conform").setup({
 		html = { { "prettierd", "prettier" } },
 		css = { { "prettierd", "prettier" } },
 		lua = { { "stylua" } },
+		python = { { "autopep8" } },
 	},
 })
 

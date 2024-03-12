@@ -96,6 +96,21 @@ require("lspconfig").clangd.setup({
 	},
 })
 
+require("lspconfig").pylsp.setup({
+	settings = {
+		pylsp = {
+			plugins = {
+				autopep8 = {
+					enabled = false,
+				},
+				pycodestyle = {
+					enabled = false,
+				},
+			},
+		},
+	},
+})
+
 require("lspconfig").arduino_language_server.setup({
 	cmd = {
 		"arduino-language-server",
