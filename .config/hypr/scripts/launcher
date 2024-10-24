@@ -1,3 +1,4 @@
 #!/bin/bash
 
 wofi --show drun
+#ags -t launcher

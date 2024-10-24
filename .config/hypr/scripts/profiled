@@ -1,0 +1,25 @@
+#!/bin/bash
+
+POWER_PROFILE=$(cat /sys/firmware/acpi/platform_profile)
+
+while true; do
+	case $POWER_PROFILE in
+		"performance" )
+			easyeffects -b 2
+			hyprctl keyword decoration:blur:enabled true
+			hyprctl keyword animations:enabled true
+			echo "performance";;
+		"balanced" )
+			easyeffects -b 2
+			hyprctl keyword decoration:blur:enabled true
+			hyprctl keyword animations:enabled true
+			echo "balanced";;
+		"quiet" )
+			easyeffects -b 1
+			hyprctl keyword decoration:blur:enabled false
+			hyprctl keyword animations:enabled false
+			echo "quiet";;
+	esac	
+	inotifywait /sys/firmware/acpi/platform_profile -e modify
+	POWER_PROFILE=$(cat /sys/firmware/acpi/platform_profile)
+done
