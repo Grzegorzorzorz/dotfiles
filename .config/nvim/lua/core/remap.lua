@@ -29,3 +29,10 @@ vim.keymap.set("n", "<Leader>do", "<CMD>lua require('dap').step_out()<CR>", sile
 vim.keymap.set("n", "<Leader>dd", "<CMD>lua require('dap').step_over()<CR>", silent)
 vim.keymap.set("n", "<Leader>dt", "<CMD>lua require('dap').terminate()<CR>", silent)
 vim.keymap.set("n", "<Leader>du", "<CMD>lua require('dapui').toggle()<CR>", silent)
+
+vim.keymap.set("n", "<Leader>ont", "<CMD>ObsidianNewFromTemplate<CR>")
+vim.keymap.set("n", "<Leader>os", "<CMD>ObsidianSearch<CR>")
+vim.keymap.set("n", "<Leader>ot", "<CMD>ObsidianToggleCheckbox<CR>")
+vim.keymap.set("n", "<Leader>off", "<CMD>ObsidianFollowLink<CR>", silent)
+vim.keymap.set("n", "<Leader>ofv", "<CMD>ObsidianFollowLink vsplit<CR>", silent)
+vim.keymap.set("n", "<Leader>ofh", "<CMD>ObsidianFollowLink hsplit<CR>", silent)

@@ -66,7 +66,7 @@ return require("packer").startup(function(use)
 	use({ "theHamsta/nvim-dap-virtual-text" })
 	use({ "nvim-telescope/telescope-dap.nvim", requires = { "mfussenegger/nvim-dap" } })
 
-	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
+	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } })
 	use("lukas-reineke/indent-blankline.nvim")
 
 	use({ "stevearc/overseer.nvim" })
@@ -83,5 +83,25 @@ return require("packer").startup(function(use)
 		config = function()
 			require("conform").setup()
 		end,
+	})
+	use({
+		"windwp/nvim-ts-autotag",
+		config = function()
+			require("nvim-ts-autotag").setup()
+		end,
+	})
+	use({
+		"OXY2DEV/markview.nvim",
+		requires = {
+			"nvim-treesitter/nvim-treesitter",
+			"nvim-tree/nvim-web-devicons",
+		},
+		use({
+			"epwalsh/obsidian.nvim",
+			tag = "*",
+			requires = {
+				"nvim-lua/plenary.nvim",
+			},
+		}),
 	})
 end)
