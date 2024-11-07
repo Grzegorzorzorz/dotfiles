@@ -1,0 +1,17 @@
+@import "widgets/bar.css";
+@import "widgets/launcher.css";
+@import "widgets/calendar.css";
+@import "widgets/powermenu.css";
+
+* {
+  text-shadow: none;
+}
+
+button {
+  box-shadow: none;
+  border: none;
+  background: transparent;
+  border-radius: 0px;
+  color: @fg0;
+  outline: none;
+}

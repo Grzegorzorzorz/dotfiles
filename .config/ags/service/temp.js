@@ -1,0 +1,1 @@
+class TemperatureService extends Service {}

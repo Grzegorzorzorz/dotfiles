@@ -1,0 +1,123 @@
+@import url("../colours.css");
+
+@keyframes spin {
+  to {
+    -gtk-icon-transform: rotate(1turn);
+  }
+}
+
+.bar {
+  min-height: 2.5em;
+  background: @bg0t;
+  color: @fg0;
+}
+
+.superscript {
+  font-size: 75%;
+}
+
+.sys-tray-item {
+  font-size: 100%;
+  padding: 0px 0.2em;
+  margin: 0 0.2em;
+  -gtk-icon-shadow: none;
+  -gtk-icon-effect: none;
+}
+
+.date {
+  font-weight: bold;
+}
+
+.vol-icon {
+  font-size: 125%;
+  margin: 0px 4px;
+  -gtk-icon-shadow: none;
+  -gtk-icon-effect: none;
+  /* party mode ;)
+	animation-name: spin;
+	animation-duration: 0.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	*/
+}
+
+.vol-label {
+  font-size: 87.5%;
+}
+
+.module-wrapper {
+  border-radius: 999999px;
+  padding: 0 8px;
+  margin: 6px 8px;
+  color: @fg1;
+  background: @bg3;
+}
+
+.launcher-button {
+  font-size: 130%;
+  padding: 0 10px;
+  margin: 0 0.5em;
+  border-radius: 9999999999px;
+  background: @purple;
+  color: @fg1;
+}
+
+.menu-button {
+  font-size: 150%;
+}
+
+.profile-indicator {
+  font-size: 150%;
+  animation-name: spin;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.profile-indicator-balanced {
+  font-size: 150%;
+  animation-name: spin;
+  animation-duration: 0.25s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.win-title {
+  padding-left: 0.75em;
+}
+
+.workspaces button {
+  border-color: transparent;
+  font-weight: bold;
+  font-size: 90%;
+  padding: 0 5px;
+  margin: 0.4em 0.2em;
+  border-radius: 99999px;
+  color: @fg1;
+}
+
+.workspaces .active {
+  color: @bg1;
+  background: @fg0;
+}
+
+.workspaces .inactive {
+  color: @fg0;
+  background: @bg3;
+}
+
+levelbar * {
+  border: none;
+  background-color: transparent;
+}
+
+levelbar block.empty {
+  margin: 0.5em 0;
+  background-color: @bg2;
+  border-radius: 9999999px;
+}
+
+levelbar block.filled {
+  margin: 0.5em 2;
+  border-radius: 9999999px;
+  background-color: @acc;
+}

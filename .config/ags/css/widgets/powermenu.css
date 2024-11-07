@@ -1,0 +1,10 @@
+@import url("../colours.css");
+
+.powermenu {
+  background: @bg0;
+  padding: 200px;
+}
+
+.power-icon {
+  font-size: 500%;
+}

@@ -121,7 +121,6 @@ require("lspconfig").arduino_language_server.setup({
 		"/home/grzegorz/.arduino15/arduino-cli.yaml",
 		"-fqbn",
 		"arduino:avr:uno",
-		"-no-real-time-diagnostics",
 	},
 })
 
