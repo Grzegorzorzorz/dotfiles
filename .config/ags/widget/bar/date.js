@@ -1,6 +1,11 @@
 import * as vars from "../../vars.js";
 
 function getDaySuffix(day) {
+  // Fix the 11st problem.
+  if (day[0] == "1") {
+    return "th";
+  }
+
   switch (day[1]) {
     case "1":
       return "st";
