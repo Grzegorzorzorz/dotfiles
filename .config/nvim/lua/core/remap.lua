@@ -8,6 +8,15 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv;'")
 --nmap <silent> <c-h> :wincmd h<CR>
 --nmap <silent> <c-l> :wincmd l<CR>
 
+vim.keymap.set("n", "<leader>tn", "<CMD>tabnew<CR>", silent)
+vim.keymap.set("n", "<leader>tl", "<CMD>tabnext<CR>", silent)
+vim.keymap.set("n", "<leader>tk", "<CMD>tabnext<CR>", silent)
+vim.keymap.set("n", "<leader>tj", "<CMD>tabprevious<CR>", silent)
+vim.keymap.set("n", "<leader>th", "<CMD>tabprevious<CR>", silent)
+vim.keymap.set("n", "C-L", "<CMD>tabnext<CR>", silent)
+vim.keymap.set("n", "C-H", "<CMD>tabprevious<CR>", silent)
+vim.keymap.set("n", "<leader>td", "<CMD>tabclose<CR>", silent)
+
 vim.keymap.set("n", "<C-k>", "<CMD>wincmd k<CR>", silent)
 vim.keymap.set("n", "<C-j>", "<CMD>wincmd j<CR>", silent)
 vim.keymap.set("n", "<C-h>", "<CMD>wincmd h<CR>", silent)

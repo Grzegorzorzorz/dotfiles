@@ -126,9 +126,30 @@ require("lspconfig").arduino_language_server.setup({
 
 require("lspconfig").ltex.setup({
 	filetypes = { "latex", "tex", "bib", "markdown", "gitcommit", "text" },
-	ltex = {
-		language = "en-GB",
+	settings = {
+		ltex = {
+			load_langs = { "en-GB" },
+			language = "en-GB",
+			dictionary = "en-GB",
+			completionEnabled = true,
+			path = vim.fn.expand("~") .. "/.local/share/ltex",
+		},
 	},
+})
+
+require("lspconfig").rust_analyzer.setup({
+	settings = {
+		rust_analyzer = {
+			diagnostics = {
+				enable = true,
+				experimental = { enable = true },
+			},
+		},
+	},
+})
+
+require("lspconfig").qmlls.setup({
+	cmd = { "qmlls", "-E" },
 })
 
 lsp.setup()
