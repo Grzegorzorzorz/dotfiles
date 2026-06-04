@@ -65,9 +65,16 @@ hl.bind(mod .. ' + CONTROL + L', hl.dsp.exec_cmd('loginctl lock-session'))
 hl.bind(mod .. ' + RETURN', hl.dsp.exec_cmd('kitty'))
 hl.bind(mod .. ' + B', hl.dsp.exec_cmd('librewolf'))
 hl.bind(mod .. ' + T', hl.dsp.exec_cmd('thunar'))
-hl.bind('XF86Calculator', hl.dsp.exec_cmd('qalculate-gtk'))
+
+-- Shits and giggles
+hl.bind(
+   mod .. ' + SHIFT + CONTROL + ALT + L',
+   hl.dsp.exec_cmd('librewolf --new-window https://linkedin.com/')
+)
 
 -- Media keys
+hl.bind('XF86Calculator', hl.dsp.exec_cmd('qalculate-gtk'))
+
 hl.bind('Print', hl.dsp.exec_cmd(scripts .. '/screenshot'))
 hl.bind('SHIFT + Print', hl.dsp.exec_cmd(scripts .. '/screenshot-area'))
 hl.bind('CONTROL + SHIFT + Print', hl.dsp.exec_cmd(scripts .. '/screenshot-area-edit'))
@@ -78,6 +85,15 @@ hl.bind('XF86MonBrightnessDown', hl.dsp.exec_cmd('xbacklight -dec 10'))
 hl.bind('ALT + left', hl.dsp.exec_cmd('playerctl previous'), { locked = true })
 hl.bind('ALT + down', hl.dsp.exec_cmd('playerctl play-pause'), { locked = true })
 hl.bind('ALT + right', hl.dsp.exec_cmd('playerctl next'), { locked = true })
+
+hl.bind('XF86AudioNext', hl.dsp.exec_cmd('playerctl next'))
+hl.bind('XF86AudioPlay', hl.dsp.exec_cmd('playerctl play-pause'))
+hl.bind('XF86AudioPrev', hl.dsp.exec_cmd('playerctl previous'))
+
+-- We bind both here because my laptop uses a different key for this than my keyboard, and
+-- my keyboard isn't especially cooperative in binding that specific keycode.
+hl.bind('XF86Launch4', hl.dsp.exec_cmd(scripts .. '/power-profiles-cycle'))
+hl.bind('XF86Launch5', hl.dsp.exec_cmd(scripts .. '/power-profiles-cycle'))
 
 hl.bind(
    'XF86AudioRaiseVolume',
