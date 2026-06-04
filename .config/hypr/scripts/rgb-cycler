@@ -11,7 +11,7 @@ else
 fi
 
 if [[ "$RGB_MODE" == '' || "$RGB_MODE" == 'static' ]]; then
-	asusctl led-mode rainbow -d right -s low
+	asusctl led-mode rainbow-wave -d right -s low
 	echo "rainbow" > $TMP_PATH/rgb-mode
 elif [[ "$RGB_MODE" == 'rainbow' ]]; then
 	asusctl led-mode static -c ffffff

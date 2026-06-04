@@ -1,0 +1,6 @@
+require('hyprland.env')
+require('hyprland.monitors')
+require('hyprland.services')
+require('hyprland.workspaces')
+require('hyprland.input')
+require('hyprland.appearance')

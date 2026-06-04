@@ -1,0 +1,20 @@
+#!/bin/bash
+
+set -e
+
+export SVDIR="$HOME/.local/service"
+
+#hyprshutdown --no-exit --no-fork
+
+# Wait for the closing animation to finish
+sleep 0.5
+
+hyprctl dispatch 'hl.config({cursor = { invisible = true }})'
+sv stop shell &
+sv stop wallpaper &
+wait
+
+# Let it sink in a little
+sleep 0.5
+
+hyprctl dispatch 'hl.dsp.exit()'

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+PROFILE_CURRENT=$(tuned-adm active | awk -F' ' '{ print $4 }')
+
+if [[ "$PROFILE_CURRENT" == 'grz-quiet' ]]; then
+	tuned-adm profile grz-balanced
+elif [[ "$PROFILE_CURRENT" == 'grz-balanced' ]]; then
+	tuned-adm profile grz-performance
+elif [[ "$PROFILE_CURRENT" == 'grz-performance' ]]; then
+	tuned-adm profile grz-quiet
+else
+	tuned-adm profile grz-balanced
+fi
+
+notify-send "Power profiles" "$(tuned-adm active)"
