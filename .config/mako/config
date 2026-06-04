@@ -1,29 +1,21 @@
 output=eDP-1
-border-radius=16
+border-radius=0
 background-color=#2E3440
-background-color=#3B4252
-text-color=#ECEFF4
-text-alignment=center
-border-size=2
-border-color=#A3BE8C
+background-color=#252525F0
+background-color=#202020F0
+text-color=#cdcdcd
+text-alignment=left
+border-size=0
 default-timeout=5000
-anchor=bottom-center
-margin=0,0,8,0
-padding=16
-icons=0
-font=Torus 14
-width=512
+anchor=top-right
+margin=8,8,0,0
+padding=8
+border-radius=8
+font=Noto Sans Regular 10
+icons=1
+width=320
 height=128
 layer=overlay
-
-[urgency=low]
-border-color=#88C0D0
-
-[urgency=critical]
-background-color=#BF616A
-border-color=#BF616A
-ignore-timeout=1
-default-timeout=0
 
 [mode=do-not-disturb]
 invisible=1
