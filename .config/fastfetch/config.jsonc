@@ -6,14 +6,14 @@
     "os",
     "host",
     "kernel",
-	"shell",
+    "shell",
     "break",
-	{
-	  "type": "colors",
-	  "symbol": "circle"
-	},
-	"break"
+    {
+      "type": "colors",
+      "symbol": "circle",
+    },
+    "break",
   ],
-  "logo": "gentoo-linux-small",
-  "colors-symbol": "circle"
+  "logo": "Gentoo_small",
+  "colors-symbol": "circle",
 }
