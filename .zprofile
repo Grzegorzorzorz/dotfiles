@@ -1,5 +1,6 @@
-if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty8 ]]; then
 	clear
-	exec $HOME/.local/bin/start-hyprland &> /dev/null
-	sleep 1
+	export SVDIR=$HOME/.local/service
+	#exec $HOME/.local/bin/start-hyprland
+	exec /usr/bin/start-hyprland
 fi
