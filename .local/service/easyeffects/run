@@ -1,0 +1,5 @@
+#!/bin/bash
+#sv -w 5 check pipewire || exit 1
+#exec easyeffects --gapplication-service
+sv start pipewire
+exec easyeffects -w

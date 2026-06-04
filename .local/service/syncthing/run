@@ -1,0 +1,5 @@
+#!/bin/bash
+export STDATADIR=$HOME/.local/state/syncthing
+export STCONFDIR=$HOME/.config/syncthing
+
+exec syncthing

@@ -1,0 +1,3 @@
+#!/bin/bash
+#exec $HOME/.local/share/go/bin/ags quit -i bar
+#exec $HOME/.local/share/go/bin/ags quit -i notif

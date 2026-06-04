@@ -1,0 +1,6 @@
+#!/bin/bash
+#cd $HOME/Projects/dotfiles/.config/ags2
+#exec $HOME/.local/share/go/bin/ags run app.ts
+
+export QS_ICON_THEME="Adwaita"
+exec quickshell --path $HOME/Projects/grzell/
