@@ -20,7 +20,7 @@ hl.device({
 
 ----------------------------------------------------------------------------------------------------
 -- Core bindings
-hl.bind(mod .. ' + SHIFT + E', hl.dsp.exec_cmd(scripts .. '/shutdown-hyprland > /tmp/sd.log'))
+hl.bind(mod .. ' + SHIFT + E', hl.dsp.exec_cmd(scripts .. '/shutdown-hyprland'))
 --hl.bind(
 --   mod .. ' + SHIFT + E',
 --   hl.dsp.exec_cmd('hyprshutdown --no-exit --post-cmd ' .. scripts .. '/shutdown-hyprland')
@@ -71,6 +71,10 @@ hl.bind('XF86Calculator', hl.dsp.exec_cmd('qalculate-gtk'))
 hl.bind('Print', hl.dsp.exec_cmd(scripts .. '/screenshot'))
 hl.bind('SHIFT + Print', hl.dsp.exec_cmd(scripts .. '/screenshot-area'))
 hl.bind('CONTROL + SHIFT + Print', hl.dsp.exec_cmd(scripts .. '/screenshot-area-edit'))
+
+hl.bind('XF86MonBrightnessUp', hl.dsp.exec_cmd('xbacklight -inc 10'))
+hl.bind('XF86MonBrightnessDown', hl.dsp.exec_cmd('xbacklight -dec 10'))
+
 hl.bind('ALT + left', hl.dsp.exec_cmd('playerctl previous'), { locked = true })
 hl.bind('ALT + down', hl.dsp.exec_cmd('playerctl play-pause'), { locked = true })
 hl.bind('ALT + right', hl.dsp.exec_cmd('playerctl next'), { locked = true })
