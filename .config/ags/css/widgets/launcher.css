@@ -1,6 +1,0 @@
-@import url("../colours.css");
-
-.launcher {
-  color: @fg1;
-  background: @bg1;
-}
