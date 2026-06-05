@@ -42,6 +42,16 @@ require('lazy').setup({
          dependencies = { 'nvim-tree/nvim-web-devicons' },
       },
       { 'lukas-reineke/indent-blankline.nvim' },
+      { 'stevearc/overseer.nvim' },
+      {
+         'nvim-telescope/telescope.nvim',
+         version = '*',
+         dependencies = {
+            'nvim-lua/plenary.nvim',
+            -- optional but recommended
+            { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+         },
+      },
    },
    -- Configure any other settings here. See the documentation for more details.
    -- colorscheme that will be used when installing plugins.
