@@ -42,7 +42,6 @@ require('lazy').setup({
          dependencies = { 'nvim-tree/nvim-web-devicons' },
       },
       { 'lukas-reineke/indent-blankline.nvim' },
-      { 'stevearc/overseer.nvim' },
       {
          'nvim-telescope/telescope.nvim',
          version = '*',
@@ -51,6 +50,10 @@ require('lazy').setup({
             -- optional but recommended
             { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
          },
+      },
+      {
+         'stevearc/overseer.nvim',
+         dependencies = { 'nvim-telescope/telescope.nvim', 'stevearc/dressing.nvim' },
       },
    },
    -- Configure any other settings here. See the documentation for more details.
