@@ -35,7 +35,6 @@ require('lazy').setup({
             'LazyGitFilterCurrentFile',
          },
       },
-      { 'prichrd/netrw.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' } },
       { 'lewis6991/gitsigns.nvim', opts = {} },
       {
          'nvim-lualine/lualine.nvim',
@@ -54,6 +53,10 @@ require('lazy').setup({
       {
          'stevearc/overseer.nvim',
          dependencies = { 'nvim-telescope/telescope.nvim', 'stevearc/dressing.nvim' },
+      },
+      {
+         'stevearc/oil.nvim',
+         dependencies = { 'nvim-tree/nvim-web-devicons' },
       },
    },
    -- Configure any other settings here. See the documentation for more details.
