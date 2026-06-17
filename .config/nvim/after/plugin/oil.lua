@@ -1,5 +1,8 @@
 require('oil').setup({
    default_file_explorer = true,
+   keymaps = {
+      ['<ESC>'] = { 'actions.close', mode = 'n' },
+   },
    float = {
       padding = 2,
       max_width = 0.80,
@@ -12,4 +15,4 @@ require('oil').setup({
    },
 })
 
-vim.keymap.set('n', '<leader>pv', ':Oil --float<CR>')
+vim.keymap.set('n', '<leader>pv', ':Oil --float --preview<CR>')
