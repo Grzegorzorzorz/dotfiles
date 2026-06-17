@@ -1,4 +1,4 @@
 require('overseer').setup({})
 
-vim.keymap.set('n', '<leader>tr', ':OverseerRun<CR>')
-vim.keymap.set('n', '<leader>tt', ':OverseerToggle<CR>')
+vim.keymap.set('n', '<leader>tt', ':OverseerRun<CR>')
+vim.keymap.set('n', '<leader>tv', ':OverseerToggle<CR>')
