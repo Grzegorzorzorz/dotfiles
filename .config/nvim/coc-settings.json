@@ -31,6 +31,14 @@
     "operator": "󰆕",
     "typeParameter": "󰅲"
   },
+  "suggest.floatConfig": {
+    "border": true,
+    "rounded": true
+  },
+  "diagnostic.floatConfig": {
+    "border": true,
+    "rounded": true
+  },
   "codeLens.enable": true,
   "ltex.language": "en-GB",
   "ltex.disabledRules": {
