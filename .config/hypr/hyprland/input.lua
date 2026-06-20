@@ -41,8 +41,6 @@ hl.bind(mod .. ' + C', hl.dsp.workspace.toggle_special('comms'))
 hl.bind(mod .. ' + M', hl.dsp.workspace.toggle_special('music'))
 
 for _, direction in pairs({ 'left', 'right', 'up', 'down' }) do
-   hl.bind(mod .. ' + ' .. direction, hl.dsp.focus({ direction = direction }))
-   hl.bind(mod .. ' + SHIFT + ' .. direction, hl.dsp.window.move({ direction = direction }))
 end
 hl.bind(mod .. '+ CONTROL + left', hl.dsp.focus({ workspace = 'm-1' }))
 hl.bind(mod .. '+ CONTROL + right', hl.dsp.focus({ workspace = 'm+1' }))
@@ -51,9 +49,48 @@ hl.bind(mod .. ' + SHIFT + SPACE', hl.dsp.window.float({ action = 'toggle' }))
 hl.bind(mod .. ' + F', hl.dsp.window.fullscreen({ mode = 'maximized', action = 'toggle' }))
 hl.bind(mod .. ' + SHIFT + F', hl.dsp.window.fullscreen({ mode = 'fullscreen', action = 'toggle' }))
 
+for _, direction in pairs({ 'left', 'h' }) do
+   hl.bind(mod .. ' + ' .. direction, hl.dsp.focus({ direction = 'left' }))
+   hl.bind(mod .. ' + SHIFT + ' .. direction, hl.dsp.window.move({ direction = 'left' }))
+   hl.bind(
+      mod .. ' + ALT + ' .. direction,
+      hl.dsp.window.resize({ x = -10, y = 0, relative = true }),
+      { repeating = true }
+   )
+end
+
+for _, direction in pairs({ 'right', 'l' }) do
+   hl.bind(mod .. ' + ' .. direction, hl.dsp.focus({ direction = 'right' }))
+   hl.bind(mod .. ' + SHIFT + ' .. direction, hl.dsp.window.move({ direction = 'right' }))
+   hl.bind(
+      mod .. ' + ALT + ' .. direction,
+      hl.dsp.window.resize({ x = 10, y = 0, relative = true }),
+      { repeating = true }
+   )
+end
+
+for _, direction in pairs({ 'up', 'k' }) do
+   hl.bind(mod .. ' + ' .. direction, hl.dsp.focus({ direction = 'up' }))
+   hl.bind(mod .. ' + SHIFT + ' .. direction, hl.dsp.window.move({ direction = 'up' }))
+   hl.bind(
+      mod .. ' + ALT + ' .. direction,
+      hl.dsp.window.resize({ x = 0, y = -10, relative = true }),
+      { repeating = true }
+   )
+end
+
+for _, direction in pairs({ 'down', 'j' }) do
+   hl.bind(mod .. ' + ' .. direction, hl.dsp.focus({ direction = 'down' }))
+   hl.bind(mod .. ' + SHIFT + ' .. direction, hl.dsp.window.move({ direction = 'down' }))
+   hl.bind(
+      mod .. ' + ALT + ' .. direction,
+      hl.dsp.window.resize({ x = 0, y = 10, relative = true }),
+      { repeating = true }
+   )
+end
+
 hl.bind(mod .. ' + mouse:272', hl.dsp.window.drag(), { mouse = true })
 hl.bind(mod .. ' + mouse:273', hl.dsp.window.resize(), { mouse = true })
-
 ----------------------------------------------------------------------------------------------------
 -- Programs
 
