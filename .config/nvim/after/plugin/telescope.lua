@@ -10,7 +10,8 @@ require('telescope').setup({
 require('telescope').load_extension('coc')
 
 vim.keymap.set('n', '<leader>pf', ':Telescope find_files<CR>')
-vim.keymap.set('n', '<leader>pb', ':Telescope buffers<CR>')
+
+vim.keymap.set('n', '<leader>bf', ':Telescope buffers<CR>')
 
 vim.keymap.set('n', '<leader>cc', ':Telescope coc commands<CR>')
 vim.keymap.set('n', '<leader>ce', ':Telescope coc diagnostics<CR>')
