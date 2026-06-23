@@ -5,7 +5,11 @@ SCREENSHOT_DIR="/home/grzegorz/Pictures/screenshots"
 SCREENSHOT_NAME=$(date +${FORMAT}).png
 SCREENSHOT_PATH=$SCREENSHOT_DIR/$SCREENSHOT_NAME
 
-hyprshot -z -m region -s -f $SCREENSHOT_NAME -o $SCREENSHOT_DIR
-swappy -f $SCREENSHOT_PATH -o $SCREENSHOT_PATH
+hyprshot -z -m region -s --raw | \
+    satty -o $SCREENSHOT_PATH -f - \
+        --fullscreen \
+        --disable-notifications \
+        --actions-on-escape save-to-file \
+        --early-exit
 
 wl-copy < $SCREENSHOT_PATH
