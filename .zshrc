@@ -207,9 +207,12 @@ alias cd="z"
 alias vim="nvim"
 
 export ANDROID_HOME=$HOME/.local/share/android/Sdk/
+export VOLTA_HOME=$HOME/.volta
+
 export PATH=/home/grzegorz/.cargo/bin:$PATH
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$VOLTA_HOME/bin
 
 eval "$(zoxide init zsh)"
 
