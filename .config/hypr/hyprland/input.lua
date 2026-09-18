@@ -116,8 +116,8 @@ hl.bind('Print', hl.dsp.exec_cmd(scripts .. '/screenshot'))
 hl.bind('SHIFT + Print', hl.dsp.exec_cmd(scripts .. '/screenshot-area'))
 hl.bind('CONTROL + SHIFT + Print', hl.dsp.exec_cmd(scripts .. '/screenshot-area-edit'))
 
-hl.bind('XF86MonBrightnessUp', hl.dsp.exec_cmd('xbacklight -inc 10'))
-hl.bind('XF86MonBrightnessDown', hl.dsp.exec_cmd('xbacklight -dec 10'))
+hl.bind('XF86MonBrightnessUp', hl.dsp.exec_cmd('xbacklight -inc 10 -steps 4'))
+hl.bind('XF86MonBrightnessDown', hl.dsp.exec_cmd('xbacklight -dec 10 -steps 4'))
 
 hl.bind('ALT + left', hl.dsp.exec_cmd('playerctl previous'), { locked = true })
 hl.bind('ALT + down', hl.dsp.exec_cmd('playerctl play-pause'), { locked = true })
