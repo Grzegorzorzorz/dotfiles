@@ -1,3 +1,0 @@
-makoctl mode -a do-not-disturb
-hyprlock "$@"
-makoctl mode -r do-not-disturb
